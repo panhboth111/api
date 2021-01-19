@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Scene,Word,Bookmark, Understood, Recommendation
+from .models import Scene,Word,Bookmark, Understood
 
 class SceneSerializer(serializers.ModelSerializer):
     words = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
@@ -18,7 +18,7 @@ class UnderstoodSerializer(serializers.ModelSerializer):
     class Meta:
         fields = "__all__"
         model = Bookmark
-class RecommendationSerializer(serializers.ModelSerializer):
-    class Meta:
-        fields = "__all__"
-        model = Recommendation
+# class RecommendationSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         fields = "__all__"
+#         model = Recommendation

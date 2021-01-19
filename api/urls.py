@@ -3,7 +3,7 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework_simplejwt import views as jwt_views
 from accounts.views import UserViewSet
-from scenes.views import SceneViewSet, WordViewSet, BookmarkViewSet 
+from scenes.views import SceneViewSet, WordViewSet, BookmarkViewSet, RecommendationViewSet, UnderstoodViewSet 
 
 
 router = routers.SimpleRouter()
@@ -11,6 +11,8 @@ router.register('accounts', UserViewSet)
 router.register('scenes', SceneViewSet)
 router.register('words', WordViewSet)
 router.register('bookmarks', BookmarkViewSet)
+router.register('recommendations', RecommendationViewSet)
+router.register('understoods', UnderstoodViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

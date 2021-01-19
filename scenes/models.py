@@ -18,9 +18,7 @@ class Word (models.Model):
     example = models.TextField()
     scene = models.ForeignKey(Scene, related_name='words',on_delete=models.CASCADE)
 
-class Recommendation (models.Model):
-    scene_image = models.CharField( max_length=20 )
-    scene = models.ForeignKey(Scene, on_delete=models.CASCADE)
+
 class Bookmark(models.Model):
     word = models.CharField( max_length=20 )
     definition = models.TextField()
