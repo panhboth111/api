@@ -18,7 +18,7 @@ class UnderstoodSerializer(serializers.ModelSerializer):
     class Meta:
         fields = "__all__"
         model = Bookmark
-# class RecommendationSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         fields = "__all__"
-#         model = Recommendation
+class RecommendationSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = "__all__"
+        model = Recommendation
